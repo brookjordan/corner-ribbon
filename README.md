@@ -153,6 +153,14 @@ Well… do WE have a solution for you?!
 
 … no. No is the answer there. If enough requests come in, I'll look into it, though!
 
+### MHOAR OPTIONS!!!
+
+Whoa! Ha… you're getting a little excited there… <sub>and just a tad scary… <sup>could you brush your teeth before you do that again, please?</sup></sub>
+
+There actually ARE more options… but I'll let you find them for yourself as they're all quite edge case and, hopefully, quite easy to decipher.
+
+Look through the files in `scss/settings` and you should be flying.
+
 ## License
 
 Copyright © 2018 [Brook Jordan](https://brookjordan.co.uk/)
