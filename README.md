@@ -15,9 +15,9 @@ Attention-seeking ribbons for when generic horizontal titles just aren't enough
   </span>
 </span>
 
-<span class="corner-ribbon-container corner-ribbon-container--loose">
+<span class="corner-ribbon-container corner-ribbon-container--tight">
   <span class="corner-ribbon corner-ribbon--dark">
-    I'm all dark and shady…
+    I'm all dark and tight…
   </span>
 </span>
 ```
