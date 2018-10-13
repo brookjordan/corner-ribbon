@@ -76,7 +76,8 @@ ie. `<span class="corner-ribbon corner-ribbon--colour-class-suffix">`
 `$corner-ribbon-ribbon-selector`  
 `$corner-ribbon-container-selector`
 
-I heard you came to us to fix your styles, not to make you change-up your HTML? That's ok, we can… maybe help a little bit.
+I heard you came to us to fix your styles, not dirty up your beautiful HTML with our dirty, dirty classes. That's ok. we can help! <sub>…maybe <sup>…at least a little.</sup></sub>
+
 You'll still need both of the elements, but at least you can change the base classes to better fit the rest of your code.
 
 Try something like:
