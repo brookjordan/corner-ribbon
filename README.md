@@ -29,7 +29,7 @@ Attention-seeking ribbons for when generic horizontal titles just aren't enough.
 
 Make sure the parent of the ribbons is `position: relative | absolute | fixed;`.
 
-Use the `css/corner-ribbons.css` file directly for instant, garish red (`--dark`) and yellow (`--light`) ribbons.
+Use the `css/corner-ribbons.css` file directly for instant super-yellow and garish-red (`--dark`) ribbons.
 
 Or, better still, set the `$corner-ribbon-x` variables to your hearts' desire and then use:
 
