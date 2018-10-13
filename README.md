@@ -6,7 +6,7 @@ Usage
 ```html
 <span class="corner-ribbon-container corner-ribbon-container--loose">
   <span class="corner-ribbon corner-ribbon--dark">
-    Hey, are
+    Look at my ribbons!
   </span>
 </span>
 ```
