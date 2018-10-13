@@ -26,6 +26,7 @@
     "email": "brkjrdn@gmail.com",
     "url": "https://brookjordan.co.uk"
   },
+  "main": "scss/corner-ribbons.scss",
   "license": "MIT",
   "homepage": "https://github.com/brookjordan/corner-ribbon#readme"
 }
