@@ -1,6 +1,6 @@
 # Corner ribbon
 
-Attention-seeking ribbons for when generic horizontal titles just aren't enough
+Attention-seeking ribbons for when generic horizontal titles just aren't enough.
 
 <img width="381" alt="screen shot 2018-10-13 at 18 59 36" src="https://user-images.githubusercontent.com/9323190/46904663-80b14280-cf1a-11e8-9184-fba709bbc388.png">
 
@@ -27,9 +27,11 @@ Attention-seeking ribbons for when generic horizontal titles just aren't enough
 
 ## Usage
 
-Use the `css/corner-ribbons.css` file directly for instant, garish red (`--dark`) and yellow (`--light`) ribbons
+Make sure the parent of the ribbons is `position: relative | absolute | fixed;`.
 
-Or, better still, set the `$corner-ribbon-x` variables to your hearts' desire and then run
+Use the `css/corner-ribbons.css` file directly for instant, garish red (`--dark`) and yellow (`--light`) ribbons.
+
+Or, better still, set the `$corner-ribbon-x` variables to your hearts' desire and then use:
 
 ```sass
 @import "path/to/tools/_print-all-ribbon-styles";
