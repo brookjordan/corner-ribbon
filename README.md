@@ -7,17 +7,17 @@ Attention-seeking ribbons for when generic horizontal titles just aren't enough
 ```html
 <span class="corner-ribbon-container">
   <span class="corner-ribbon">
-    Look at my ribbons!
+    I'm a default ribbon!
   </span>
   
   <span class="corner-ribbon corner-ribbon--top-right">
-    Look at my ribbons!
+    I'm up on the top right!
   </span>
 </span>
 
 <span class="corner-ribbon-container corner-ribbon-container--loose">
   <span class="corner-ribbon corner-ribbon--dark">
-    Look at my ribbons!
+    I'm all dark and shady…
   </span>
 </span>
 ```
