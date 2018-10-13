@@ -37,7 +37,7 @@ Or, better still, set the `$corner-ribbon-x` variables to your hearts' desire an
 @import "path/to/tools/_print-all-ribbon-styles";
 
 $corner-ribbon-colors: (
-  light: (
+  default: (
     color: black,
     background-color: yellow,
     hover-background-color: orange,
