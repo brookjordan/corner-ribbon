@@ -1,6 +1,6 @@
 @import "../settings/default-alignment";
 
-@mixin attach-corner-ribbon-to-corner($corner: $default-alignment) {
+@mixin attach-corner-ribbon-to($corner: $default-alignment) {
   @if $corner == top-left {
     left: 0;
     transform-origin: 0 100%;
@@ -20,12 +20,4 @@
       translateX(#{ sqrt( pow(100, 2) / 2) * -1% })
       rotate(135deg);
   }
-}
-
-@mixin attach-corner-ribbon-top-left {
-  @include attach-corner-ribbon-to-corner(top-left);
-}
-
-@mixin attach-corner-ribbon-top-right {
-  @include attach-corner-ribbon-to-corner(top-right);
 }

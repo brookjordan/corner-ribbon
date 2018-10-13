@@ -9,5 +9,5 @@
 
 #{unquote($corner-ribbon-ribbon-selector)} {
   @include corner-ribbon-base;
-  @include attach-corner-ribbon-top-right;
+  @include attach-corner-ribbon-to(top-right);
 }

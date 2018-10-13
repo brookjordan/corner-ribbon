@@ -1,27 +1,3 @@
-@import "settings/selectors";
-@import "settings/default-alignment";
-@import "settings/anchor-points";
+@import "tools/print-all-ribbon-styles";
 
-@import "tools/base-styles";
-@import "tools/attachments";
-
-#{unquote($corner-ribbon-container-selector)} {
-  @include corner-ribbon-container-base;
-}
-
-#{unquote($corner-ribbon-ribbon-selector)} {
-  @include corner-ribbon-base;
-
-  @each $anchor-point in $corner-ribbons-all-anchor-points {
-    @if $default-alignment == $anchor-point {
-      &,
-      &--#{$anchor-point} {
-        @include attach-corner-ribbon-to-corner($anchor-point);
-      }
-    } @else {
-      &--#{$anchor-point} {
-        @include attach-corner-ribbon-to-corner($anchor-point);
-      }
-    }
-  }
-}
+@include print-all-ribbon-styles;
