@@ -15,16 +15,16 @@
 
   @each $tightness-name, $tightness-size in $corner-ribbon-tightnesses {
     @if $tightness-name == default {
-      top: -$tightness-size * 1px - 1px;
-      left: -$tightness-size * 1px - 1px;
-      width: calc(100% + #{$tightness-size * 1px});
-      height: calc(100% + #{$tightness-size * 1px});
+      top: -$tightness-size * 1px;
+      left: -$tightness-size * 1px;
+      width: calc(100% + #{$tightness-size * 2px});
+      height: calc(100% + #{$tightness-size * 2px});
     } @else {
       &--#{$tightness-name} {
-        top: -$tightness-size * 1px;
-        left: -$tightness-size * 1px;
-        width: calc(100% + #{$tightness-size * 1px});
-        height: calc(100% + #{$tightness-size * 1px});
+        top: -$tightness-size * 2px;
+        left: -$tightness-size * 2px;
+        width: calc(100% + #{$tightness-size * 2px});
+        height: calc(100% + #{$tightness-size * 2px});
       }
     }
   }

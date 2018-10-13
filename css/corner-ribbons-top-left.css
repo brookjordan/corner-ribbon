@@ -1,21 +1,21 @@
-.corner-ribbon-bounds {
+.corner-ribbon-container {
   position: absolute;
   overflow: hidden;
   pointer-events: none;
-  top: -6px;
-  left: -6px;
-  width: calc(100% + 5px);
-  height: calc(100% + 5px); }
-  .corner-ribbon-bounds--tight {
-    top: -2px;
-    left: -2px;
-    width: calc(100% + 2px);
-    height: calc(100% + 2px); }
-  .corner-ribbon-bounds--loose {
-    top: -10px;
-    left: -10px;
-    width: calc(100% + 10px);
-    height: calc(100% + 10px); }
+  top: -5px;
+  left: -5px;
+  width: calc(100% + 10px);
+  height: calc(100% + 10px); }
+  .corner-ribbon-container--tight {
+    top: -4px;
+    left: -4px;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px); }
+  .corner-ribbon-container--loose {
+    top: -20px;
+    left: -20px;
+    width: calc(100% + 20px);
+    height: calc(100% + 20px); }
 
 .corner-ribbon {
   position: absolute;
@@ -29,6 +29,7 @@
   color: black;
   background: yellow;
   left: 0;
+  right: auto;
   transform-origin: 0 100%;
   transform: translateY(-100%) rotate(-90deg) translateX(-70.7106781187%) rotate(45deg); }
   .corner-ribbon:hover {
@@ -50,9 +51,9 @@
     border-style: solid;
     border-bottom-color: transparent;
     border-width: 3.5355339059px; }
-    .corner-ribbon-bounds--tight .corner-ribbon::before, .corner-ribbon-bounds--tight .corner-ribbon::after {
+    .corner-ribbon-container--tight .corner-ribbon::before, .corner-ribbon-container--tight .corner-ribbon::after {
       border-width: 1.4142135624px; }
-    .corner-ribbon-bounds--loose .corner-ribbon::before, .corner-ribbon-bounds--loose .corner-ribbon::after {
+    .corner-ribbon-container--loose .corner-ribbon::before, .corner-ribbon-container--loose .corner-ribbon::after {
       border-width: 7.0710678119px; }
   .corner-ribbon::before {
     left: 0;

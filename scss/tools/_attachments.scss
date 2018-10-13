@@ -3,6 +3,7 @@
 @mixin attach-corner-ribbon-to($corner: $default-alignment) {
   @if $corner == top-left {
     left: 0;
+    right: auto;
     transform-origin: 0 100%;
     transform:
       translateY(-100%)
@@ -12,7 +13,8 @@
   }
 
   @if $corner == top-right {
-    right: -1px; //  I don't know why?!?
+    right: 0;
+    left: auto;
     transform-origin: 100% 100%;
     transform:
       translateY(-100%)
