@@ -21,8 +21,8 @@
       height: calc(100% + #{$tightness-size * 2px});
     } @else {
       &--#{$tightness-name} {
-        top: -$tightness-size * 2px;
-        left: -$tightness-size * 2px;
+        top: -$tightness-size * 1px;
+        left: -$tightness-size * 1px;
         width: calc(100% + #{$tightness-size * 2px});
         height: calc(100% + #{$tightness-size * 2px});
       }
