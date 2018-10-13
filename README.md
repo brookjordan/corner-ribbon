@@ -1,4 +1,5 @@
-# Corner ribbon `from: minified - 613 bytes | gzipped - 360 bytes`
+# Corner ribbon
+`from: minified - 613 bytes | gzipped - 360 bytes`
 
 Attention-seeking ribbons for when generic, horizontal titles just aren't enough.
 
