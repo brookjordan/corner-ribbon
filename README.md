@@ -94,7 +94,7 @@ $corner-ribbon-container-selector: ".c";
 And you've cut your markup down to:
 ```html
 <span class="c">
-  <span class="r r--dark">
+  <span class="r">
     Look at my ribbons!
   </span>
 </span>
