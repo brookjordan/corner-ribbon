@@ -48,7 +48,7 @@
   }
 
   @each $color-name, $color-details in $corner-ribbon-colors {
-    &--#{ $color-name } {
+    @if $color-name == default {
       color: map-get($color-details, color);
       background: map-get($color-details, background-color);
 
@@ -61,6 +61,22 @@
       &::before,
       &::after {
         border-color: map-get($color-details, shadow-color);
+      }
+    } @else {
+      &--#{ $color-name } {
+        color: map-get($color-details, color);
+        background: map-get($color-details, background-color);
+  
+        @if $corner-ribbon-change-background-on-hover {
+          &:hover {
+            background: map-get($color-details, hover-background-color);
+          }
+        }
+  
+        &::before,
+        &::after {
+          border-color: map-get($color-details, shadow-color);
+        }
       }
     }
   }

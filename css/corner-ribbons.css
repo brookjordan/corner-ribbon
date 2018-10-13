@@ -25,14 +25,13 @@
   pointer-events: auto;
   text-decoration: none;
   will-change: transform;
-  transition: background-color 0.2s; }
-  .corner-ribbon--light {
-    color: black;
-    background: yellow; }
-    .corner-ribbon--light:hover {
-      background: orange; }
-    .corner-ribbon--light::before, .corner-ribbon--light::after {
-      border-color: darkorange; }
+  transition: background-color 0.2s;
+  color: black;
+  background: yellow; }
+  .corner-ribbon:hover {
+    background: orange; }
+  .corner-ribbon::before, .corner-ribbon::after {
+    border-color: darkorange; }
   .corner-ribbon--dark {
     color: white;
     background: red; }
