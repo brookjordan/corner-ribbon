@@ -71,5 +71,5 @@ ie. `<span class="corner-ribbon corner-ribbon--dark">`
 
 ## License
 
-Copyright (c) 2018 [Brook Jordan](https://brookjordan.co.uk/)
+Copyright © 2018 [Brook Jordan](https://brookjordan.co.uk/)
 Licensed under the [MIT license](http://www.opensource.org/licenses/MIT).
