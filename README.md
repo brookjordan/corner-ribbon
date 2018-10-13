@@ -1,6 +1,6 @@
 # Corner ribbon
 
-Attention-seeking ribbons for when generic horizontal titles just aren't enough.
+Attention-seeking ribbons for when generic, horizontal titles just aren't enough.
 
 <img width="448" alt="screen shot 2018-10-13 at 20 17 16" src="https://user-images.githubusercontent.com/9323190/46905366-4a2cf500-cf25-11e8-8ee4-c11a5e7c8ae6.png">
 
