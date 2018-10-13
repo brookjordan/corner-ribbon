@@ -101,9 +101,6 @@ And you've cut your markup down to:
 </span>
 ```
 
-In future I'm looking to even remove the `--dark`!
-Stay tuned.x
-
 ### Alignment
 
 You don't like your ribbons on the top left? Oh, come on.
