@@ -111,7 +111,9 @@ And you can cut your markup down to as little as:
 ```html
 <b><i>Look at my ribbons!</i></b>
 ```
-<sub><sup>But please don't, this is atrocious…</sup></sub>
+However, please bear in mind that in order to use colours and tightnesses other than the default you'll need to use `.class`es as the selectors.
+
+<sub><sup>plus, disregaring that fact, this markup is horribly unreadable…</sup></sub>
 
 ### Alignment
 
