@@ -101,20 +101,19 @@ For example, if you only have one ribbon colour:
 ```sass
 @import "path/to/tools/_print-all-ribbon-styles";
 
-$corner-ribbon-ribbon-selector: ".r";
-$corner-ribbon-container-selector: ".c";
+$corner-ribbon-ribbon-selector: "#r";
+$corner-ribbon-container-selector: "#c";
 
 @include print-all-ribbon-styles;
 ```
 
-And you've cut your markup down to:
+And you can cut your markup down to as little as:
 ```html
-<span class="c">
-  <span class="r">
-    Look at my ribbons!
-  </span>
-</span>
+<i id="c"><i id="r">
+  Look at my ribbons!
+</i></i>
 ```
+<sub><sup>But please don't, this is atrocious…</sup></sub>
 
 ### Alignment
 
