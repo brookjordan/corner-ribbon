@@ -14,7 +14,8 @@
   #{unquote($corner-ribbon-ribbon-selector)} {
     @include corner-ribbon-base;
   
-    @each $anchor-point in $corner-ribbons-all-anchor-points {
+    @each $anchor-point in $corner-ribbons-all-anchor-points
+    {
       @if $default-alignment == $anchor-point {
         &,
         &--#{$anchor-point} {
