@@ -22,10 +22,13 @@ Attention-seeking ribbons for when generic, horizontal titles just aren't enough
 </span>
 ```
 
+Why 2 divs for this simple little ribbon, you ask?
 
-## Install
+Well, the first, containing span crops the corners off've the ribbons, making them look that awesome ribbony shape and not like big blocks clawing onto your container. That's why.
 
-## Usage
+Notice that, because the container is the one controlling the cropping, you can have many of the same tightness ribbons inside of a single container as you'd like! Neato… right? <sup>right? <sub>right?</sub></sup>
+
+## Using your own colours in your own CSS files
 
 Make sure the parent of the ribbons is `position: relative | absolute | fixed;`.
 
