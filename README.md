@@ -109,9 +109,7 @@ $corner-ribbon-container-selector: "b";
 
 And you can cut your markup down to as little as:
 ```html
-<b><i>
-  Look at my ribbons!
-</i></b>
+<b><i>Look at my ribbons!</i></b>
 ```
 <sub><sup>But please don't, this is atrocious…</sup></sub>
 
