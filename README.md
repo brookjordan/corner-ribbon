@@ -101,17 +101,17 @@ For example, if you only have one ribbon colour:
 ```sass
 @import "path/to/tools/_print-all-ribbon-styles";
 
-$corner-ribbon-ribbon-selector: "#r";
-$corner-ribbon-container-selector: "#c";
+$corner-ribbon-ribbon-selector: "i";
+$corner-ribbon-container-selector: "b";
 
 @include print-all-ribbon-styles;
 ```
 
 And you can cut your markup down to as little as:
 ```html
-<i id="c"><i id="r">
+<b><i>
   Look at my ribbons!
-</i></i>
+</i></b>
 ```
 <sub><sup>But please don't, this is atrocious…</sup></sub>
 
