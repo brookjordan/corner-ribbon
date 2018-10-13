@@ -48,7 +48,9 @@ $corner-ribbon-colors: (
 ### Colours
 `$corner-ribbon-colors`
 
-This accepts an object which describes all of the colours of ribbon you'll want to use in your app.
+Often you won't want to use bright yellow and medium blue banners. (We get it. Managers can be super uptight about branding an all that. It's cool, we've got ya back!)
+
+This accepts an object which describes all the colours of ribbon you'll want to use in your app.
 
 For example, if you only have one ribbon colour:
 ```sass
@@ -63,11 +65,43 @@ $corner-ribbon-colors: (
 ```
 
 `colour-class-suffix` is the secondary class you would use on your ribbon in the HTML.  
-ie. `<span class="corner-ribbon corner-ribbon--dark">`
+ie. `<span class="corner-ribbon corner-ribbon--colour-class-suffix">`
  - `color` is the text colour of the ribbon
  - `background-color` the base background colour of the ribbon
  - `hover-background-color` the background colour of the ribbon when hovered - ignored if `$corner-ribbon-change-background-on-hover` is false
  - `shadow-color` the background colour of ribbon folds
+ 
+
+### Selectors
+`$corner-ribbon-ribbon-selector`  
+`$corner-ribbon-container-selector`
+
+I heard you came to us to fix your styles, not to make you change-up your HTML? That's ok, we can… maybe help a little bit.
+You'll still need both of the elements, but at least you can change the base classes to better fit the rest of your code.
+
+Try something like:
+
+For example, if you only have one ribbon colour:
+```sass
+@import "path/to/tools/_print-all-ribbon-styles";
+
+$corner-ribbon-ribbon-selector: ".r";
+$corner-ribbon-container-selector: ".c";
+
+@include print-all-ribbon-styles;
+```
+
+And you've cut your markup down to:
+```html
+<span class="c">
+  <span class="r r--dark">
+    Look at my ribbons!
+  </span>
+</span>
+```
+
+In future I'm looking to even remove the `--dark`!
+Stay tuned.x
 
 ## License
 
