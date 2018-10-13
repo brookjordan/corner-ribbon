@@ -1,77 +1,65 @@
-/*
-Error: File to import not found or unreadable: ../../node_modules/mathsass/dist/functions/sqrt.
-       Load path: /Users/brookjordan/Github/corner-ribbon/dist
-        on line 8 of dist/tools/_base-styles.scss
-        from line 3 of dist/corner-ribbons-top-right.scss
+.corner-ribbon-bounds {
+  position: absolute;
+  overflow: hidden;
+  pointer-events: none;
+  top: -6px;
+  left: -6px;
+  width: calc(100% + 5px);
+  height: calc(100% + 5px); }
+  .corner-ribbon-bounds--tight {
+    top: -2px;
+    left: -2px;
+    width: calc(100% + 2px);
+    height: calc(100% + 2px); }
+  .corner-ribbon-bounds--loose {
+    top: -10px;
+    left: -10px;
+    width: calc(100% + 10px);
+    height: calc(100% + 10px); }
 
-3: @import "tools/base-styles";
-4: @import "tools/attachments";
-5: 
-6: #{unquote($corner-ribbon-container-selector)} {
-7:   @include corner-ribbon-container-base;
-8: }
-9: 
-10: #{unquote($corner-ribbon-ribbon-selector)} {
-11:   @include corner-ribbon-base;
-12:   @include attach-corner-ribbon-top-right;
-13: }
+.corner-ribbon {
+  position: absolute;
+  top: 0;
+  padding: 8px 40px;
+  margin: 0;
+  pointer-events: auto;
+  text-decoration: none;
+  will-change: transform;
+  transition: background-color 0.2s;
+  right: -1px;
+  transform-origin: 100% 100%;
+  transform: translateY(-100%) rotate(-90deg) translateX(-70.7106781187%) rotate(135deg); }
+  .corner-ribbon--light {
+    color: black;
+    background: yellow; }
+    .corner-ribbon--light:hover {
+      background: orange; }
+    .corner-ribbon--light::before, .corner-ribbon--light::after {
+      border-color: darkorange; }
+  .corner-ribbon--dark {
+    color: white;
+    background: red; }
+    .corner-ribbon--dark:hover {
+      background: darkred; }
+    .corner-ribbon--dark::before, .corner-ribbon--dark::after {
+      border-color: maroon; }
+  .corner-ribbon::before, .corner-ribbon::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    width: 0;
+    border-style: solid;
+    border-bottom-color: transparent;
+    border-width: 3.5355339059px; }
+    .corner-ribbon-bounds--tight .corner-ribbon::before, .corner-ribbon-bounds--tight .corner-ribbon::after {
+      border-width: 1.4142135624px; }
+    .corner-ribbon-bounds--loose .corner-ribbon::before, .corner-ribbon-bounds--loose .corner-ribbon::after {
+      border-width: 7.0710678119px; }
+  .corner-ribbon::before {
+    left: 0;
+    border-right-color: transparent; }
+  .corner-ribbon::after {
+    right: 0;
+    border-left-color: transparent; }
 
-Backtrace:
-dist/tools/_base-styles.scss:8
-dist/corner-ribbons-top-right.scss:3
-/Users/brookjordan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/tree/import_node.rb:67:in `rescue in import'
-/Users/brookjordan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/tree/import_node.rb:44:in `import'
-/Users/brookjordan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/tree/import_node.rb:28:in `imported_file'
-/Users/brookjordan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/tree/import_node.rb:37:in `css_import?'
-/Users/brookjordan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:310:in `visit_import'
-/Users/brookjordan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Users/brookjordan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-/Users/brookjordan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/stack.rb:79:in `block in with_base'
-/Users/brookjordan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/stack.rb:135:in `with_frame'
-/Users/brookjordan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/stack.rb:79:in `with_base'
-/Users/brookjordan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:158:in `visit'
-/Users/brookjordan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:325:in `block (2 levels) in visit_import'
-/Users/brookjordan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:325:in `map'
-/Users/brookjordan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:325:in `block in visit_import'
-/Users/brookjordan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/stack.rb:88:in `block in with_import'
-/Users/brookjordan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/stack.rb:135:in `with_frame'
-/Users/brookjordan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/stack.rb:88:in `with_import'
-/Users/brookjordan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:322:in `visit_import'
-/Users/brookjordan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Users/brookjordan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-/Users/brookjordan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/stack.rb:79:in `block in with_base'
-/Users/brookjordan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/stack.rb:135:in `with_frame'
-/Users/brookjordan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/stack.rb:79:in `with_base'
-/Users/brookjordan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:158:in `visit'
-/Users/brookjordan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/Users/brookjordan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/tree/visitors/base.rb:52:in `map'
-/Users/brookjordan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/Users/brookjordan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
-/Users/brookjordan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-/Users/brookjordan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
-/Users/brookjordan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-/Users/brookjordan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
-/Users/brookjordan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Users/brookjordan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:157:in `visit'
-/Users/brookjordan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:10:in `visit'
-/Users/brookjordan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/tree/root_node.rb:36:in `css_tree'
-/Users/brookjordan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
-/Users/brookjordan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/engine.rb:389:in `_render_with_sourcemap'
-/Users/brookjordan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/engine.rb:307:in `render_with_sourcemap'
-/Users/brookjordan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
-/Users/brookjordan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/Users/brookjordan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/plugin/compiler.rb:209:in `each'
-/Users/brookjordan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/Users/brookjordan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/plugin.rb:82:in `update_stylesheets'
-/Users/brookjordan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/exec/sass_scss.rb:338:in `watch_or_update'
-/Users/brookjordan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/exec/sass_scss.rb:51:in `process_result'
-/Users/brookjordan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/exec/base.rb:50:in `parse'
-/Users/brookjordan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/exec/base.rb:18:in `parse!'
-/Users/brookjordan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/sass-3.5.7/bin/sass:13:in `<top (required)>'
-/Users/brookjordan/.rbenv/versions/2.5.1/bin/sass:23:in `load'
-/Users/brookjordan/.rbenv/versions/2.5.1/bin/sass:23:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: File to import not found or unreadable: ../../node_modules/mathsass/dist/functions/sqrt.\A        Load path: /Users/brookjordan/Github/corner-ribbon/dist\A         on line 8 of dist/tools/_base-styles.scss\A         from line 3 of dist/corner-ribbons-top-right.scss\A \A 3: @import \"tools/base-styles\";\A 4: @import \"tools/attachments\";\A 5: \A 6: #{unquote($corner-ribbon-container-selector)} {\A 7:   @include corner-ribbon-container-base;\A 8: }\A 9: \A 10: #{unquote($corner-ribbon-ribbon-selector)} {\A 11:   @include corner-ribbon-base;\A 12:   @include attach-corner-ribbon-top-right;\A 13: }"; }
+/*# sourceMappingURL=corner-ribbons-top-right.css.map */
