@@ -1,0 +1,98 @@
+@import "../settings/timing";
+@import "../settings/colors";
+@import "../settings/spacing";
+@import "../settings/selectors";
+@import "../settings/tightnesses";
+@import "../settings/interaction";
+
+@import "../../node_modules/mathsass/dist/functions/sqrt";
+@import "../../node_modules/mathsass/dist/functions/pow";
+
+@mixin corner-ribbon-container-base {
+  position: absolute;
+  overflow: hidden;
+  pointer-events: none;
+
+  @each $tightness-name, $tightness-size in $corner-ribbon-tightnesses {
+    @if $tightness-name == default {
+      top: -$tightness-size * 1px - 1px;
+      left: -$tightness-size * 1px - 1px;
+      width: calc(100% + #{$tightness-size * 1px});
+      height: calc(100% + #{$tightness-size * 1px});
+    } @else {
+      &--#{$tightness-name} {
+        top: -$tightness-size * 1px;
+        left: -$tightness-size * 1px;
+        width: calc(100% + #{$tightness-size * 1px});
+        height: calc(100% + #{$tightness-size * 1px});
+      }
+    }
+  }
+}
+  
+@mixin corner-ribbon-base {
+  position: absolute;
+  top: 0;
+  padding:
+    ($corner-ribbon-padding-vertical * 1px)
+    (20 + $corner-ribbon-padding-horizontal) * 1px; // 20 covers the diagonal
+  margin: 0;
+  pointer-events: auto;
+  text-decoration: none;
+  will-change: transform; // prevent flicker
+
+  // TODO: work out how to deal with fonts
+
+  @if $corner-ribbon-enable-transition {
+    transition: background-color $corner-ribbon-transition-background;
+  }
+
+  @each $color-name, $color-details in $corner-ribbon-colors {
+    &--#{ $color-name } {
+      color: map-get($color-details, color);
+      background: map-get($color-details, background-color);
+
+      @if $corner-ribbon-change-background-on-hover {
+        &:hover {
+          background: map-get($color-details, hover-background-color);
+        }
+      }
+
+      &::before,
+      &::after {
+        border-color: map-get($color-details, shadow-color);
+      }
+    }
+  }
+  
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    width: 0;
+    border-style: solid;
+    border-bottom-color: transparent;
+
+    // TODO: Work out how to neatly remove the selector from here
+    @each $tightness-name, $tightness-size in $corner-ribbon-tightnesses {
+      @if $tightness-name == default {
+        border-width: sqrt(pow($tightness-size / 2, 2) * 2) * 1px;
+      } @else {
+        #{$corner-ribbon-container-selector}--#{$tightness-name} & {
+          border-width: sqrt(pow($tightness-size / 2, 2) * 2) * 1px;
+        }
+      }
+    }
+  }
+  
+  &::before {
+    left: 0;
+    border-right-color: transparent;
+  }
+  
+  &::after {
+    right: 0;
+    border-left-color: transparent;
+  }
+}

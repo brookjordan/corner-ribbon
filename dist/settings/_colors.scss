@@ -1,0 +1,15 @@
+$corner-ribbon-colors: (
+  light: (
+    color: black,
+    background-color: yellow,
+    hover-background-color: orange,
+    shadow-color: darkorange,
+  ),
+
+  dark: (
+    color: white,
+    background-color: red,
+    hover-background-color: darkred,
+    shadow-color: maroon,
+  ),
+) !default;

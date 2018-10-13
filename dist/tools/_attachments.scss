@@ -1,0 +1,31 @@
+@import "../settings/default-alignment";
+
+@mixin attach-corner-ribbon-to-corner($corner: $default-alignment) {
+  @if $corner == top-left {
+    left: 0;
+    transform-origin: 0 100%;
+    transform:
+      translateY(-100%)
+      rotate(-90deg)
+      translateX(#{ sqrt( pow(100, 2) / 2) * -1% })
+      rotate(45deg);
+  }
+
+  @if $corner == top-right {
+    right: -1px; //  I don't know why?!?
+    transform-origin: 100% 100%;
+    transform:
+      translateY(-100%)
+      rotate(-90deg)
+      translateX(#{ sqrt( pow(100, 2) / 2) * -1% })
+      rotate(135deg);
+  }
+}
+
+@mixin attach-corner-ribbon-top-left {
+  @include attach-corner-ribbon-to-corner(top-left);
+}
+
+@mixin attach-corner-ribbon-top-right {
+  @include attach-corner-ribbon-to-corner(top-right);
+}

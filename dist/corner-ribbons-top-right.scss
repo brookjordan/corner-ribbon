@@ -1,0 +1,13 @@
+@import "settings/selectors";
+
+@import "tools/base-styles";
+@import "tools/attachments";
+
+#{unquote($corner-ribbon-container-selector)} {
+  @include corner-ribbon-container-base;
+}
+
+#{unquote($corner-ribbon-ribbon-selector)} {
+  @include corner-ribbon-base;
+  @include attach-corner-ribbon-top-right;
+}
