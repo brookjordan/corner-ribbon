@@ -103,6 +103,46 @@ And you've cut your markup down to:
 In future I'm looking to even remove the `--dark`!
 Stay tuned.x
 
+### Alignment
+
+You don't like your ribbons on the top left? Oh, come on.
+… ok, fine. We'll allow you to move it to the top right.
+
+Use this markup instead:
+```html
+<span class="corner-ribbon-container">
+  <span class="corner-ribbon corner-ribbon--dark  corner-ribbon--top-right">
+    Look at my ribbons!
+  </span>
+</span>
+```
+
+What's that you say?
+Your ribbons are *mostly* top-right, so you don't want to type all of that?
+Ok, cool, then revert your markup back to the default and add this variable to your sass:
+
+```sass
+@import "path/to/tools/_print-all-ribbon-styles";
+
+$default-alignment: top-right;
+
+@include print-all-ribbon-styles;
+```
+
+You what?
+Your ribbons are *ALWAYS* top-right, so you don't even want to include the <sub><sup>(5 lines of)</sup></sub> CSS for the top left?
+I'm still with ya! Do this instead:
+```sass
+@import "path/to/tools/_print-all-ribbon-styles";
+
+@include print-ribbon-styles-for(top-right);
+```
+
+On the bottom, you say?
+Well… do WE have a solution for you?!
+
+… no. No is the answer there. If enough requests come in, I'll look into it, though!
+
 ## License
 
 Copyright © 2018 [Brook Jordan](https://brookjordan.co.uk/)
