@@ -1,5 +1,31 @@
 {
-  "dependencies": {
+  "name": "corner-ribbon",
+  "version": "1.0.0",
+  "description": "Responsive corner labels",
+  "dev-dependencies": {
     "mathsass": "^0.10.1"
-  }
+  },
+  "devDependencies": {},
+  "scripts": {
+    "compile": "sass --update scss:css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brookjordan/corner-ribbon.git"
+  },
+  "keywords": [
+    "sass",
+    "scss",
+    "corner",
+    "ribbon",
+    "banner",
+    "label"
+  ],
+  "author": {
+    "name": "Brook Jordan",
+    "email": "brkjrdn@gmail.com",
+    "url": "https://brookjordan.co.uk"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/brookjordan/corner-ribbon#readme"
 }
