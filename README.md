@@ -26,7 +26,7 @@ Why 2 divs for this simple little ribbon, you ask?
 
 Well, the first, containing span crops the corners off've the ribbons, making them look that awesome ribbony shape and not like big blocks clawing onto your container. That's why.
 
-Notice that, because the container is the one controlling the cropping, you can have many of the same tightness ribbons inside of a single container as you'd like! Neato… right? <sup>right? <sub>right?</sub></sup>
+Notice that, because the container is the one controlling the cropping, you can have as many of the same tightness ribbons inside of a single container as you'd like! Neato… right? <sup>right? <sub>right?</sub></sup>
 
 ## Using your own colours in your own CSS files
 
