@@ -1,8 +1,9 @@
 # Corner ribbon
 
-##
+Attention-seeking ribbons for when generic horizontal titles just aren't enough
 
-Usage
+<img width="381" alt="screen shot 2018-10-13 at 18 59 36" src="https://user-images.githubusercontent.com/9323190/46904663-80b14280-cf1a-11e8-9184-fba709bbc388.png">
+
 ```html
 <span class="corner-ribbon-container corner-ribbon-container--loose">
   <span class="corner-ribbon corner-ribbon--dark">
@@ -11,11 +12,6 @@ Usage
 </span>
 ```
 
-## What is it?
-
-Attention-seeking ribbons for when generic horizontal titles just aren't enough
-
-<img width="381" alt="screen shot 2018-10-13 at 18 59 36" src="https://user-images.githubusercontent.com/9323190/46904663-80b14280-cf1a-11e8-9184-fba709bbc388.png">
 
 ## Install
 
