@@ -62,8 +62,8 @@ $corner-ribbon-colors: (
 );
 ```
 
-Where:
-`colour-class-suffix` is the secondary class you would use on your ribbon in the HTML. ie. <span class="corner-ribbon corner-ribbon--dark">
+`colour-class-suffix` is the secondary class you would use on your ribbon in the HTML.  
+ie. `<span class="corner-ribbon corner-ribbon--dark">`
  - `color` is the text colour of the ribbon
  - `background-color` the base background colour of the ribbon
  - `hover-background-color` the background colour of the ribbon when hovered - ignored if `$corner-ribbon-change-background-on-hover` is false
