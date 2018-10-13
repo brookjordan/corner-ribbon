@@ -21,7 +21,7 @@ Use the `css/corner-ribbons.css` file directly for instant, garish red (`--dark`
 
 Or, better still, set the `$corner-ribbon-x` variables to your hearts' desire and then run
 
-```scss
+```sass
 @import "path/to/tools/_print-all-ribbon-styles";
 
 $corner-ribbon-colors: (
@@ -38,7 +38,7 @@ $corner-ribbon-colors: (
     hover-background-color: darkblue,
     shadow-color: navy,
   ),
-) !default;
+);
 
 @include print-all-ribbon-styles;
 ```
@@ -51,7 +51,7 @@ $corner-ribbon-colors: (
 This accepts an object which describes all of the colours of ribbon you'll want to use in your app.
 
 For example, if you only have one ribbon colour:
-```scss
+```sass
 $corner-ribbon-colors: (
   colour-class-suffix: (
     color: $color,
