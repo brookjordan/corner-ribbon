@@ -1,7 +1,7 @@
 {
   "name": "corner-label",
   "version": "1.0.0",
-  "description": "Responsive corner labels",
+  "description": "Responsive labels appearing as ribbons around the corner of their parent",
   "dev-dependencies": {
     "mathsass": "^0.10.1"
   },
