@@ -8,12 +8,12 @@
 @import "../../node_modules/mathsass/dist/functions/sqrt";
 @import "../../node_modules/mathsass/dist/functions/pow";
 
-@mixin corner-ribbon-container-base {
+@mixin corner-label-container-base {
   position: absolute;
   overflow: hidden;
   pointer-events: none;
 
-  @each $tightness-name, $tightness-size in $corner-ribbon-tightnesses {
+  @each $tightness-name, $tightness-size in $corner-label-tightnesses {
     @if $tightness-name == default {
       top: -$tightness-size * 1px;
       left: -$tightness-size * 1px;
@@ -30,12 +30,12 @@
   }
 }
   
-@mixin corner-ribbon-base {
+@mixin corner-label-base {
   position: absolute;
   top: 0;
   padding:
-    ($corner-ribbon-padding-vertical * 1px)
-    (20 + $corner-ribbon-padding-horizontal) * 1px; // 20 covers the diagonal
+    ($corner-label-padding-vertical * 1px)
+    (20 + $corner-label-padding-horizontal) * 1px; // 20 covers the diagonal
   margin: 0;
   pointer-events: auto;
   text-decoration: none;
@@ -43,16 +43,16 @@
 
   // TODO: work out how to deal with fonts
 
-  @if $corner-ribbon-enable-transition {
-    transition: background-color $corner-ribbon-transition-background;
+  @if $corner-label-enable-transition {
+    transition: background-color $corner-label-transition-background;
   }
 
-  @each $color-name, $color-details in $corner-ribbon-colors {
+  @each $color-name, $color-details in $corner-label-colors {
     @if $color-name == default {
       color: map-get($color-details, color);
       background: map-get($color-details, background-color);
 
-      @if $corner-ribbon-change-background-on-hover {
+      @if $corner-label-change-background-on-hover {
         &:hover {
           background: map-get($color-details, hover-background-color);
         }
@@ -67,7 +67,7 @@
         color: map-get($color-details, color);
         background: map-get($color-details, background-color);
   
-        @if $corner-ribbon-change-background-on-hover {
+        @if $corner-label-change-background-on-hover {
           &:hover {
             background: map-get($color-details, hover-background-color);
           }
@@ -91,11 +91,11 @@
     border-bottom-color: transparent;
 
     // TODO: Work out how to neatly remove the selector from here
-    @each $tightness-name, $tightness-size in $corner-ribbon-tightnesses {
+    @each $tightness-name, $tightness-size in $corner-label-tightnesses {
       @if $tightness-name == default {
         border-width: sqrt(pow($tightness-size / 2, 2) * 2) * 1px;
       } @else {
-        #{$corner-ribbon-container-selector}--#{$tightness-name} & {
+        #{$corner-label-container-selector}--#{$tightness-name} & {
           border-width: sqrt(pow($tightness-size / 2, 2) * 2) * 1px;
         }
       }

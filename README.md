@@ -1,46 +1,46 @@
-# Corner ribbon
+# Corner label
 <code><sup>from 360 bytes <sub>minified & gzipped</sub></sup></code>
 
-Attention-seeking ribbons for when generic, horizontal titles just aren't enough.
+Attention-seeking labels for when generic, horizontal titles just aren't enough.
 
 <img width="448" alt="screen shot 2018-10-13 at 20 17 16" src="https://user-images.githubusercontent.com/9323190/46905366-4a2cf500-cf25-11e8-8ee4-c11a5e7c8ae6.png">
 
 ```html
-<span class="corner-ribbon-container">
-  <span class="corner-ribbon">
-    I'm a default ribbon!
+<span class="corner-label-container">
+  <span class="corner-label">
+    I'm a default label!
   </span>
   
-  <span class="corner-ribbon corner-ribbon--top-right">
+  <span class="corner-label corner-label--top-right">
     I'm up on the top right!
   </span>
 </span>
 
-<span class="corner-ribbon-container corner-ribbon-container--tight">
-  <span class="corner-ribbon corner-ribbon--dark">
+<span class="corner-label-container corner-label-container--tight">
+  <span class="corner-label corner-label--dark">
     I'm all dark and tight…
   </span>
 </span>
 ```
 
-Why 2 divs for this simple little ribbon, you ask?
+Why 2 divs for this simple little label, you ask?
 
-Well, the first, containing span crops the corners off've the ribbons, making them look that awesome ribbony shape and not like big blocks clawing onto your container. That's why.
+Well, the first, containing span crops the corners off've the labels, making them look that awesome labely shape and not like big blocks clawing onto your container. That's why.
 
-Notice that, because the container is the one controlling the cropping, you can have as many of the same tightness ribbons inside of a single container as you'd like! Neato… right? <sup>right? <sub>right?</sub></sup>
+Notice that, because the container is the one controlling the cropping, you can have as many of the same tightness labels inside of a single container as you'd like! Neato… right? <sup>right? <sub>right?</sub></sup>
 
 ## Using your own colours in your own CSS files
 
-Make sure the parent of the ribbons is `position: relative | absolute | fixed;`.
+Make sure the parent of the labels is `position: relative | absolute | fixed;`.
 
-Use the `css/corner-ribbons.css` file directly for instant super-yellow and garish-red (`--dark`) ribbons.
+Use the `css/corner-labels.css` file directly for instant super-yellow and garish-red (`--dark`) labels.
 
-Or, better still, set the `$corner-ribbon-x` variables to your hearts' desire and then use:
+Or, better still, set the `$corner-label-x` variables to your hearts' desire and then use:
 
 ```sass
-@import "path/to/tools/_print-all-ribbon-styles";
+@import "path/to/tools/_print-all-label-styles";
 
-$corner-ribbon-colors: (
+$corner-label-colors: (
   default: (
     color: black,
     background-color: yellow,
@@ -56,21 +56,21 @@ $corner-ribbon-colors: (
   ),
 );
 
-@include print-all-ribbon-styles;
+@include print-all-label-styles;
 ```
 
 ## Customisation
 
 ### Colours
-`$corner-ribbon-colors`
+`$corner-label-colors`
 
 Often you won't want to use bright yellow and medium blue banners. (We get it. Managers can be super uptight about branding an all that. It's cool, we've got ya back!)
 
-This accepts an object which describes all the colours of ribbon you'll want to use in your app.
+This accepts an object which describes all the colours of label you'll want to use in your app.
 
-For example, if you only have one ribbon colour:
+For example, if you only have one label colour:
 ```sass
-$corner-ribbon-colors: (
+$corner-label-colors: (
   colour-class-suffix: (
     color: $color,
     background-color: $background-color,
@@ -80,17 +80,17 @@ $corner-ribbon-colors: (
 );
 ```
 
-`colour-class-suffix` is the secondary class you would use on your ribbon in the HTML.  
-ie. `<span class="corner-ribbon corner-ribbon--colour-class-suffix">`
- - `color` is the text colour of the ribbon
- - `background-color` the base background colour of the ribbon
- - `hover-background-color` the background colour of the ribbon when hovered - ignored if `$corner-ribbon-change-background-on-hover` is false
- - `shadow-color` the background colour of ribbon folds
+`colour-class-suffix` is the secondary class you would use on your label in the HTML.  
+ie. `<span class="corner-label corner-label--colour-class-suffix">`
+ - `color` is the text colour of the label
+ - `background-color` the base background colour of the label
+ - `hover-background-color` the background colour of the label when hovered - ignored if `$corner-label-change-background-on-hover` is false
+ - `shadow-color` the background colour of label folds
  
 
 ### Selectors
-`$corner-ribbon-ribbon-selector`  
-`$corner-ribbon-container-selector`
+`$corner-label-label-selector`  
+`$corner-label-container-selector`
 
 I heard you came to us to fix your styles, not dirty up your beautiful HTML with our dirty, dirty classes. That's ok. we can help! <sub>…maybe <sup>…at least a little.</sup></sub>
 
@@ -98,14 +98,14 @@ You'll still need both of the elements, but at least you can change the base cla
 
 Try something like:
 
-For example, if you only have one ribbon colour:
+For example, if you only have one label colour:
 ```sass
-@import "path/to/tools/_print-all-ribbon-styles";
+@import "path/to/tools/_print-all-label-styles";
 
 $corner-ribbon-ribbon-selector: "i";
 $corner-ribbon-container-selector: "b";
 
-@include print-all-ribbon-styles;
+@include print-all-label-styles;
 ```
 
 And you can cut your markup down to as little as:
@@ -118,37 +118,37 @@ However, please bear in mind that in order to use colours and tightnesses other 
 
 ### Alignment
 
-You don't like your ribbons on the top left? Oh, come on.
+You don't like your labels on the top left? Oh, come on.
 … ok, fine. We'll allow you to move it to the top right.
 
 Use this markup instead:
 ```html
-<span class="corner-ribbon-container">
-  <span class="corner-ribbon corner-ribbon--dark  corner-ribbon--top-right">
-    Look at my ribbons!
+<span class="corner-label-container">
+  <span class="corner-label corner-label--dark  corner-label--top-right">
+    Look at my labels!
   </span>
 </span>
 ```
 
 What's that you say?
-Your ribbons are *mostly* top-right, so you don't want to type all of that?
+Your labels are *mostly* top-right, so you don't want to type all of that?
 Ok, cool, then revert your markup back to the default and add this variable to your sass:
 
 ```sass
-@import "path/to/tools/_print-all-ribbon-styles";
+@import "path/to/tools/_print-all-label-styles";
 
 $default-alignment: top-right;
 
-@include print-all-ribbon-styles;
+@include print-all-label-styles;
 ```
 
 You what?
-Your ribbons are *ALWAYS* top-right, so you don't even want to include the <sub><sup>(5 lines of)</sup></sub> CSS for the top left?
+Your labels are *ALWAYS* top-right, so you don't even want to include the <sub><sup>(5 lines of)</sup></sub> CSS for the top left?
 I'm still with ya! Do this instead:
 ```sass
-@import "path/to/tools/_print-all-ribbon-styles";
+@import "path/to/tools/_print-all-label-styles";
 
-@include print-ribbon-styles-for(top-right);
+@include print-label-styles-for(top-right);
 ```
 
 On the bottom, you say?

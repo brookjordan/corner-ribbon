@@ -1,6 +1,6 @@
 @import "../settings/default-alignment";
 
-@mixin attach-corner-ribbon-to($corner: $default-alignment) {
+@mixin attach-corner-label-to($corner: $default-alignment) {
   @if $corner == top-left {
     left: 0;
     right: auto;

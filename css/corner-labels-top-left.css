@@ -28,10 +28,10 @@
   transition: background-color 0.2s;
   color: black;
   background: yellow;
-  right: 0;
-  left: auto;
-  transform-origin: 100% 100%;
-  transform: translateY(-100%) rotate(-90deg) translateX(-70.7106781187%) rotate(135deg); }
+  left: 0;
+  right: auto;
+  transform-origin: 0 100%;
+  transform: translateY(-100%) rotate(-90deg) translateX(-70.7106781187%) rotate(45deg); }
   .corner-label:hover {
     background: orange; }
   .corner-label::before, .corner-label::after {
@@ -62,4 +62,4 @@
     right: 0;
     border-left-color: transparent; }
 
-/*# sourceMappingURL=corner-ribbons-top-right.css.map */
+/*# sourceMappingURL=corner-labels-top-left.css.map */

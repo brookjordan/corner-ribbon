@@ -1,0 +1,13 @@
+@import "settings/selectors";
+
+@import "tools/base-styles";
+@import "tools/attachments";
+
+#{unquote($corner-label-container-selector)} {
+  @include corner-label-container-base;
+}
+
+#{unquote($corner-label-label-selector)} {
+  @include corner-label-base;
+  @include attach-corner-label-to(top-left);
+}

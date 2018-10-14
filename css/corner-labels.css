@@ -27,11 +27,7 @@
   will-change: transform;
   transition: background-color 0.2s;
   color: black;
-  background: yellow;
-  right: 0;
-  left: auto;
-  transform-origin: 100% 100%;
-  transform: translateY(-100%) rotate(-90deg) translateX(-70.7106781187%) rotate(135deg); }
+  background: yellow; }
   .corner-label:hover {
     background: orange; }
   .corner-label::before, .corner-label::after {
@@ -61,5 +57,15 @@
   .corner-label::after {
     right: 0;
     border-left-color: transparent; }
+  .corner-label, .corner-label--top-left {
+    left: 0;
+    right: auto;
+    transform-origin: 0 100%;
+    transform: translateY(-100%) rotate(-90deg) translateX(-70.7106781187%) rotate(45deg); }
+  .corner-label--top-right {
+    right: 0;
+    left: auto;
+    transform-origin: 100% 100%;
+    transform: translateY(-100%) rotate(-90deg) translateX(-70.7106781187%) rotate(135deg); }
 
-/*# sourceMappingURL=corner-ribbons-top-right.css.map */
+/*# sourceMappingURL=corner-labels.css.map */

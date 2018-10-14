@@ -1,5 +1,5 @@
 {
-  "name": "corner-ribbon",
+  "name": "corner-label",
   "version": "1.0.0",
   "description": "Responsive corner labels",
   "dev-dependencies": {
@@ -26,7 +26,7 @@
     "email": "brkjrdn@gmail.com",
     "url": "https://brookjordan.co.uk"
   },
-  "main": "scss/corner-ribbons.scss",
+  "main": "scss/corner-labels.scss",
   "license": "MIT",
   "homepage": "https://github.com/brookjordan/corner-ribbon#readme"
 }

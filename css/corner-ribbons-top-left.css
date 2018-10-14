@@ -1,4 +1,4 @@
-.corner-ribbon-container {
+.corner-label-container {
   position: absolute;
   overflow: hidden;
   pointer-events: none;
@@ -6,18 +6,18 @@
   left: -5px;
   width: calc(100% + 10px);
   height: calc(100% + 10px); }
-  .corner-ribbon-container--tight {
+  .corner-label-container--tight {
     top: -2px;
     left: -2px;
     width: calc(100% + 4px);
     height: calc(100% + 4px); }
-  .corner-ribbon-container--loose {
+  .corner-label-container--loose {
     top: -10px;
     left: -10px;
     width: calc(100% + 20px);
     height: calc(100% + 20px); }
 
-.corner-ribbon {
+.corner-label {
   position: absolute;
   top: 0;
   padding: 8px 40px;
@@ -32,18 +32,18 @@
   right: auto;
   transform-origin: 0 100%;
   transform: translateY(-100%) rotate(-90deg) translateX(-70.7106781187%) rotate(45deg); }
-  .corner-ribbon:hover {
+  .corner-label:hover {
     background: orange; }
-  .corner-ribbon::before, .corner-ribbon::after {
+  .corner-label::before, .corner-label::after {
     border-color: darkorange; }
-  .corner-ribbon--dark {
+  .corner-label--dark {
     color: white;
     background: red; }
-    .corner-ribbon--dark:hover {
+    .corner-label--dark:hover {
       background: darkred; }
-    .corner-ribbon--dark::before, .corner-ribbon--dark::after {
+    .corner-label--dark::before, .corner-label--dark::after {
       border-color: maroon; }
-  .corner-ribbon::before, .corner-ribbon::after {
+  .corner-label::before, .corner-label::after {
     content: '';
     position: absolute;
     top: 100%;
@@ -51,14 +51,14 @@
     border-style: solid;
     border-bottom-color: transparent;
     border-width: 3.5355339059px; }
-    .corner-ribbon-container--tight .corner-ribbon::before, .corner-ribbon-container--tight .corner-ribbon::after {
+    .corner-label-container--tight .corner-label::before, .corner-label-container--tight .corner-label::after {
       border-width: 1.4142135624px; }
-    .corner-ribbon-container--loose .corner-ribbon::before, .corner-ribbon-container--loose .corner-ribbon::after {
+    .corner-label-container--loose .corner-label::before, .corner-label-container--loose .corner-label::after {
       border-width: 7.0710678119px; }
-  .corner-ribbon::before {
+  .corner-label::before {
     left: 0;
     border-right-color: transparent; }
-  .corner-ribbon::after {
+  .corner-label::after {
     right: 0;
     border-left-color: transparent; }
 
