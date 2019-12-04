@@ -5,8 +5,7 @@
 @import "../settings/tightnesses";
 @import "../settings/interaction";
 
-@import "../../node_modules/mathsass/dist/functions/sqrt";
-@import "../../node_modules/mathsass/dist/functions/pow";
+@import "~mathsass/dist/math";
 
 @mixin corner-label-container-base {
   position: absolute;
