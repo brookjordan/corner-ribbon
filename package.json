@@ -2,16 +2,16 @@
   "name": "corner-label",
   "version": "1.0.0",
   "description": "Responsive labels appearing as ribbons around the corner of their parent",
-  "dev-dependencies": {
+  "dev-dependencies": {},
+  "devDependencies": {
     "mathsass": "^0.10.1"
   },
-  "devDependencies": {},
   "scripts": {
     "compile": "sass --update scss:css"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/brookjordan/corner-ribbon.git"
+    "url": "git+https://github.com/mist-webit/corner-ribbon.git"
   },
   "keywords": [
     "sass",
@@ -21,12 +21,7 @@
     "banner",
     "label"
   ],
-  "author": {
-    "name": "Brook Jordan",
-    "email": "brook@brook.dev",
-    "url": "https://brook.dev"
-  },
   "main": "scss/corner-labels.scss",
   "license": "MIT",
-  "homepage": "https://github.com/brookjordan/corner-ribbon#readme"
+  "homepage": "https://github.com/mist-webit/corner-ribbon#readme"
 }
