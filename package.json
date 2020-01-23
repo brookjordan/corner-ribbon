@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mist-webit/corner-ribbon.git"
+    "url": "git+https://github.com/brookjordan/corner-ribbon.git"
   },
   "keywords": [
     "sass",
@@ -23,5 +23,5 @@
   ],
   "main": "scss/corner-labels.scss",
   "license": "MIT",
-  "homepage": "https://github.com/mist-webit/corner-ribbon#readme"
+  "homepage": "https://github.com/brookjordan/corner-ribbon#readme"
 }
