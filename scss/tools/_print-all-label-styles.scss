@@ -1,10 +1,10 @@
-@import "settings/selectors";
-@import "settings/default-alignment";
-@import "settings/anchor-points";
-@import "settings/default-alignment";
+@import "../settings/selectors";
+@import "../settings/default-alignment";
+@import "../settings/anchor-points";
+@import "../settings/default-alignment";
 
-@import "tools/base-styles";
-@import "tools/attachments";
+@import "../tools/base-styles";
+@import "../tools/attachments";
 
 @mixin print-all-label-styles {
   #{unquote($corner-label-container-selector)} {
