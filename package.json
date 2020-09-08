@@ -1,6 +1,6 @@
 {
   "name": "corner-label",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Responsive labels appearing as ribbons around the corner of their parent",
   "dev-dependencies": {},
   "devDependencies": {
