@@ -1,18 +1,43 @@
-@import "../settings/timing";
-@import "../settings/colors";
-@import "../settings/spacing";
-@import "../settings/selectors";
-@import "../settings/tightnesses";
-@import "../settings/interaction";
+@use "sass:map";
+@use "sass:math";
+@use "../settings/timing";
+@use "../settings/colors";
+@use "../settings/spacing";
+@use "../settings/selectors";
+@use "../settings/tightnesses";
+@use "../settings/interaction";
+@use "../settings/anchor-points";
 
-@import "~mathsass/dist/math";
+@mixin attach-to-corner($corner: anchor-points.$default-alignment) {
+  @if $corner == top-left {
+    left: 0;
+    right: auto;
+    transform-origin: 0 100%;
+    transform:
+      translateY(-100%)
+      rotate(-90deg)
+      translateX(#{ math.sqrt( math.pow(100, 2) / 2) * -1% })
+      rotate(45deg);
+  }
 
-@mixin corner-label-container-base {
+  @if $corner == top-right {
+    right: 0;
+    left: auto;
+    transform-origin: 100% 100%;
+    transform:
+      translateY(-100%)
+      rotate(-90deg)
+      translateX(#{ math.sqrt( math.pow(100, 2) / 2) * -1% })
+      rotate(135deg);
+  }
+}
+
+@mixin label-container-base {
   position: absolute;
   overflow: hidden;
   pointer-events: none;
 
-  @each $tightness-name, $tightness-size in $corner-label-tightnesses {
+  @each $tightness-name, $tightness-size in tightnesses.$corner-label-tightnesses {
     @if $tightness-name == default {
       top: -$tightness-size * 1px;
       left: -$tightness-size * 1px;
@@ -28,13 +53,13 @@
     }
   }
 }
-  
-@mixin corner-label-base {
+
+@mixin label-base {
   position: absolute;
   top: 0;
   padding:
-    ($corner-label-padding-vertical * 1px)
-    (20 + $corner-label-padding-horizontal) * 1px; // 20 covers the diagonal
+    (spacing.$corner-label-padding-vertical * 1px)
+    (20 + spacing.$corner-label-padding-horizontal) * 1px; // 20 covers the diagonal
   margin: 0;
   pointer-events: auto;
   text-decoration: none;
@@ -42,44 +67,44 @@
 
   // TODO: work out how to deal with fonts
 
-  @if $corner-label-enable-transition {
-    transition: background-color $corner-label-transition-background;
+  @if timing.$corner-label-enable-transition {
+    transition: background-color timing.$corner-label-transition-background;
   }
 
-  @each $color-name, $color-details in $corner-label-colors {
+  @each $color-name, $color-details in colors.$themes {
     @if $color-name == default {
-      color: map-get($color-details, color);
-      background: map-get($color-details, background-color);
+      color: map.get($color-details, color);
+      background: map.get($color-details, background-color);
 
-      @if $corner-label-change-background-on-hover {
+      @if interaction.$corner-label-change-background-on-hover {
         &:hover {
-          background: map-get($color-details, hover-background-color);
+          background: map.get($color-details, hover-background-color);
         }
       }
 
       &::before,
       &::after {
-        border-color: map-get($color-details, shadow-color);
+        border-color: map.get($color-details, shadow-color);
       }
     } @else {
       &--#{ $color-name } {
-        color: map-get($color-details, color);
-        background: map-get($color-details, background-color);
-  
-        @if $corner-label-change-background-on-hover {
+        color: map.get($color-details, color);
+        background: map.get($color-details, background-color);
+
+        @if interaction.$corner-label-change-background-on-hover {
           &:hover {
-            background: map-get($color-details, hover-background-color);
+            background: map.get($color-details, hover-background-color);
           }
         }
-  
+
         &::before,
         &::after {
-          border-color: map-get($color-details, shadow-color);
+          border-color: map.get($color-details, shadow-color);
         }
       }
     }
   }
-  
+
   &::before,
   &::after {
     content: '';
@@ -90,22 +115,22 @@
     border-bottom-color: transparent;
 
     // TODO: Work out how to neatly remove the selector from here
-    @each $tightness-name, $tightness-size in $corner-label-tightnesses {
+    @each $tightness-name, $tightness-size in tightnesses.$corner-label-tightnesses {
       @if $tightness-name == default {
-        border-width: sqrt(pow($tightness-size / 2, 2) * 2) * 1px;
+        border-width: math.sqrt(math.pow($tightness-size / 2, 2) * 2) * 1px;
       } @else {
-        #{$corner-label-container-selector}--#{$tightness-name} & {
-          border-width: sqrt(pow($tightness-size / 2, 2) * 2) * 1px;
+        #{selectors.$label-container}--#{$tightness-name} & {
+          border-width: math.sqrt(math.pow($tightness-size / 2, 2) * 2) * 1px;
         }
       }
     }
   }
-  
+
   &::before {
     left: 0;
     border-right-color: transparent;
   }
-  
+
   &::after {
     right: 0;
     border-left-color: transparent;

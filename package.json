@@ -1,11 +1,8 @@
 {
   "name": "corner-label",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "description": "Responsive labels appearing as ribbons around the corner of their parent",
-  "dev-dependencies": {},
-  "devDependencies": {
-    "mathsass": "^0.10.1"
-  },
+  "author": "Brook Jordan <brkjrdn@gmail.com> (https://brook.dev/)",
   "scripts": {
     "compile": "sass --update scss:css"
   },
@@ -19,7 +16,10 @@
     "corner",
     "ribbon",
     "banner",
-    "label"
+    "label",
+    "corner ribbon",
+    "corner banner",
+    "corner label"
   ],
   "main": "scss/corner-labels.scss",
   "license": "MIT",

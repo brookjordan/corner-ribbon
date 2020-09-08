@@ -1,0 +1,40 @@
+@use "sass:string";
+@use "../settings/selectors";
+@use "../settings/anchor-points";
+@use "../settings/anchor-points";
+@use "../tools/base-styles";
+@use "../tools/attachments";
+
+@mixin all {
+  #{string.unquote(selectors.$label-container)} {
+    @include base-styles.label-container-base;
+  }
+
+  #{string.unquote(selectors.$label)} {
+    @include base-styles.label-base;
+
+    @each $anchor-point in anchor-points.$corner-labels-all-anchor-points {
+      @if anchor-points.$default-alignment == $anchor-point {
+        &,
+        &--#{$anchor-point} {
+          @include base-styles.attach-to-corner($anchor-point);
+        }
+      } @else {
+        &--#{$anchor-point} {
+          @include base-styles.attach-to-corner($anchor-point);
+        }
+      }
+    }
+  }
+}
+
+@mixin for($corner-name: anchor-points.$default-alignment) {
+  #{string.unquote(selectors.$label-container)} {
+    @include base-styles.label-container-base;
+  }
+
+  #{string.unquote(selectors.$label)} {
+    @include base-styles.label-base;
+    @include base-styles.attach-to-corner($corner-name);
+  }
+}

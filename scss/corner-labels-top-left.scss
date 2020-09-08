@@ -1,13 +1,12 @@
-@import "settings/selectors";
+@use "sass:string";
+@use "settings/selectors";
+@use "tools/base-styles";
 
-@import "tools/base-styles";
-@import "tools/attachments";
-
-#{unquote($corner-label-container-selector)} {
-  @include corner-label-container-base;
+#{string.unquote(selectors.$label-container)} {
+  @include base-styles.label-container-base;
 }
 
-#{unquote($corner-label-label-selector)} {
-  @include corner-label-base;
-  @include attach-corner-label-to(top-left);
+#{string.unquote(selectors.$label)} {
+  @include base-styles.label-base;
+  @include base-styles.attach-to-corner(top-left);
 }

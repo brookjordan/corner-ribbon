@@ -1,2 +1,2 @@
-$corner-label-label-selector: ".corner-label" !default;
-$corner-label-container-selector: $corner-label-label-selector + "-container" !default;
+$label: ".corner-label" !default;
+$label-container: $label + "-container" !default;

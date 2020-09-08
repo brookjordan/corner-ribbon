@@ -38,31 +38,32 @@ Use the `css/corner-labels.css` file directly for instant super-yellow and garis
 Or, better still, set the `$corner-label-x` variables to your hearts' desire and then use:
 
 ```scss
-@import "path/to/tools/_print-all-label-styles";
+@use "path/to/settings/colors" with (
+  $themes: (
+    default: (
+      color: black,
+      background-color: yellow,
+      hover-background-color: orange,
+      shadow-color: darkorange,
+    ),
 
-$corner-label-colors: (
-  default: (
-    color: black,
-    background-color: yellow,
-    hover-background-color: orange,
-    shadow-color: darkorange,
-  ),
-
-  dark: (
-    color: white,
-    background-color: blue,
-    hover-background-color: darkblue,
-    shadow-color: navy,
+    dark: (
+      color: white,
+      background-color: blue,
+      hover-background-color: darkblue,
+      shadow-color: navy,
+    ),
   ),
 );
+@use "path/to/tools/label-styles";
 
-@include print-all-label-styles;
+@include label-styles.all;
 ```
 
 ## Customisation
 
 ### Colours
-`$corner-label-colors`
+`$themes`
 
 Often you won't want to use bright yellow and medium blue banners. (We get it. Managers can be super uptight about branding an all that. It's cool, we've got ya back!)
 
@@ -70,14 +71,19 @@ This accepts an object which describes all the colours of label you'll want to u
 
 For example, if you only have one label colour:
 ```scss
-$corner-label-colors: (
-  colour-class-suffix: (
-    color: $color,
-    background-color: $background-color,
-    hover-background-color: $hover-background-color,
-    shadow-color: $shadow-color,
+@use "path/to/settings/colors" with (
+  $themes: (
+    colour-class-suffix: (
+      color: $color,
+      background-color: $background-color,
+      hover-background-color: $hover-background-color,
+      shadow-color: $shadow-color,
+    ),
   ),
 );
+@use "path/to/tools/label-styles";
+
+@include label-styles.all;
 ```
 
 `colour-class-suffix` is the secondary class you would use on your label in the HTML.
@@ -89,8 +95,8 @@ ie. `<span class="corner-label corner-label--colour-class-suffix">`
 
 
 ### Selectors
-`$corner-label-label-selector`
-`$corner-label-container-selector`
+`$label`
+`$label-container`
 
 I heard you came to us to fix your styles, not dirty up your beautiful HTML with our dirty, dirty classes. That's ok. we can help! <sub>…maybe <sup>…at least a little.</sup></sub>
 
@@ -100,12 +106,13 @@ Try something like:
 
 For example, if you only have one label colour:
 ```scss
-@import "path/to/tools/_print-all-label-styles";
+@use "path/to/settings/selectors" with (
+  $label: i,
+  $label-container: b,
+);
+@use "path/to/tools/label-styles";
 
-$corner-ribbon-ribbon-selector: "i";
-$corner-ribbon-container-selector: "b";
-
-@include print-all-label-styles;
+@include label-styles.all;
 ```
 
 And you can cut your markup down to as little as:
@@ -135,20 +142,21 @@ Your labels are *mostly* top-right, so you don't want to type all of that?
 Ok, cool, then revert your markup back to the default and add this variable to your scss:
 
 ```scss
-@import "path/to/tools/_print-all-label-styles";
+@use "path/to/settings/selectors" with (
+  $default-alignment: top-right,
+);
+@use "path/to/tools/label-styles";
 
-$default-alignment: top-right;
-
-@include print-all-label-styles;
+@include label-styles.all;
 ```
 
 You what?
 Your labels are *ALWAYS* top-right, so you don't even want to include the <sub><sup>(5 lines of)</sup></sub> CSS for the top left?
 I'm still with ya! Do this instead:
 ```scss
-@import "path/to/tools/_print-all-label-styles";
+@use "path/to/tools/label-styles";
 
-@include print-label-styles-for(top-right);
+@include label-styles.for(top-right);
 ```
 
 On the bottom, you say?
@@ -158,7 +166,7 @@ Well… do WE have a solution for you?!
 
 ### MHOAR OPTIONS!!!
 
-Whoa! Ha… you're getting a little excited there… <sub>and just a tad scary… <sup>could you brush your teeth before you do that again, please?</sup></sub>
+Whoa! Ha… you're getting a little excited there… <sub>and just a tad scary…</sub> <sup>could you brush your teeth before you do that again,<sub> please?</sup></sub>
 
 There actually ARE more options… but I'll let you find them for yourself as they're all quite edge case and, hopefully, quite easy to decipher.
 
@@ -166,5 +174,5 @@ Look through the files in `scss/settings` and you should be flying.
 
 ## License
 
-Copyright © 2018 [Brook Jordan](https://brookjordan.co.uk/)
-Licensed under the [MIT license](http://www.opensource.org/licenses/MIT).
+Copyright © 2020 [Brook Jordan](https://brook.dev/)
+Licensed under the [MIT license](http://www.opensource.org/licenses/MIT/).

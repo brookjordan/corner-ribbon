@@ -2,7 +2,3 @@
 # yarn lockfile v1
 
 
-mathsass@^0.10.1:
-  version "0.10.1"
-  resolved "https://registry.yarnpkg.com/mathsass/-/mathsass-0.10.1.tgz#8768fe20210bd5daeab6d645c42c7e69a4c60008"
-  integrity sha1-h2j+ICEL1drqttZFxCx+aaTGAAg=
