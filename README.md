@@ -10,7 +10,7 @@ Attention-seeking labels for when generic, horizontal titles just aren't enough.
   <span class="corner-label">
     I'm a default label!
   </span>
-  
+
   <span class="corner-label corner-label--top-right">
     I'm up on the top right!
   </span>
@@ -37,7 +37,7 @@ Use the `css/corner-labels.css` file directly for instant super-yellow and garis
 
 Or, better still, set the `$corner-label-x` variables to your hearts' desire and then use:
 
-```sass
+```scss
 @import "path/to/tools/_print-all-label-styles";
 
 $corner-label-colors: (
@@ -69,7 +69,7 @@ Often you won't want to use bright yellow and medium blue banners. (We get it. M
 This accepts an object which describes all the colours of label you'll want to use in your app.
 
 For example, if you only have one label colour:
-```sass
+```scss
 $corner-label-colors: (
   colour-class-suffix: (
     color: $color,
@@ -80,16 +80,16 @@ $corner-label-colors: (
 );
 ```
 
-`colour-class-suffix` is the secondary class you would use on your label in the HTML.  
+`colour-class-suffix` is the secondary class you would use on your label in the HTML.
 ie. `<span class="corner-label corner-label--colour-class-suffix">`
  - `color` is the text colour of the label
  - `background-color` the base background colour of the label
  - `hover-background-color` the background colour of the label when hovered - ignored if `$corner-label-change-background-on-hover` is false
  - `shadow-color` the background colour of label folds
- 
+
 
 ### Selectors
-`$corner-label-label-selector`  
+`$corner-label-label-selector`
 `$corner-label-container-selector`
 
 I heard you came to us to fix your styles, not dirty up your beautiful HTML with our dirty, dirty classes. That's ok. we can help! <sub>…maybe <sup>…at least a little.</sup></sub>
@@ -99,7 +99,7 @@ You'll still need both of the elements, but at least you can change the base cla
 Try something like:
 
 For example, if you only have one label colour:
-```sass
+```scss
 @import "path/to/tools/_print-all-label-styles";
 
 $corner-ribbon-ribbon-selector: "i";
@@ -132,9 +132,9 @@ Use this markup instead:
 
 What's that you say?
 Your labels are *mostly* top-right, so you don't want to type all of that?
-Ok, cool, then revert your markup back to the default and add this variable to your sass:
+Ok, cool, then revert your markup back to the default and add this variable to your scss:
 
-```sass
+```scss
 @import "path/to/tools/_print-all-label-styles";
 
 $default-alignment: top-right;
@@ -145,7 +145,7 @@ $default-alignment: top-right;
 You what?
 Your labels are *ALWAYS* top-right, so you don't even want to include the <sub><sup>(5 lines of)</sup></sub> CSS for the top left?
 I'm still with ya! Do this instead:
-```sass
+```scss
 @import "path/to/tools/_print-all-label-styles";
 
 @include print-label-styles-for(top-right);
