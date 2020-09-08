@@ -1,19 +1,19 @@
-@import "settings/selectors";
-@import "settings/default-alignment";
-@import "settings/anchor-points";
-@import "settings/default-alignment";
+@import "../settings/selectors";
+@import "../settings/default-alignment";
+@import "../settings/anchor-points";
+@import "../settings/default-alignment";
 
-@import "tools/base-styles";
-@import "tools/attachments";
+@import "../tools/base-styles";
+@import "../tools/attachments";
 
 @mixin print-all-label-styles {
   #{unquote($corner-label-container-selector)} {
     @include corner-label-container-base;
   }
-  
+
   #{unquote($corner-label-label-selector)} {
     @include corner-label-base;
-  
+
     @each $anchor-point in $corner-labels-all-anchor-points {
       @if $default-alignment == $anchor-point {
         &,
@@ -33,7 +33,7 @@
   #{unquote($corner-label-container-selector)} {
     @include corner-label-container-base;
   }
-  
+
   #{unquote($corner-label-label-selector)} {
     @include corner-label-base;
     @include attach-corner-label-to($corner-name);
