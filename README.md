@@ -1,3 +1,5 @@
+For compatibility with older versions of SASS without `@use`, please use version `1.0.2`
+
 # Corner label
 <code><sup>from 360 bytes <sub>minified & gzipped</sub></sup></code>
 

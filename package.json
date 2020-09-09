@@ -1,6 +1,6 @@
 {
   "name": "corner-label",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Responsive labels appearing as ribbons around the corner of their parent",
   "author": "Brook Jordan <brkjrdn@gmail.com> (https://brook.dev/)",
   "scripts": {
